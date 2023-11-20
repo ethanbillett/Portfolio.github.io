@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <script src="Pscript.js"></script>
+    <title>Ethan Billett Portfolio</title>
+</head>
+<body>
+
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <header id="myHeader">    
+        <h1 class="Title">Ethan Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Education">About Me</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                
+            </ul>
+        </nav>
+     
+    </header>
+
+    <main>
+        <section id="Home" class="sections">
+            <div class="text-reveal">
+                <h2>Hi My Name Is</h2>
+                <h2 class="name" data-text="Ethan Billett">Ethan Billett</h2>
+                <br>
+                <h2>This Is My Online Portfolio</h2>
+                <h3>Let me show you...</h3>
+            </div>
+        </section>
+        <section id="Projects" class="sections">
+            <h2 class="section-heading">Projects</h2>
+            <div class="project-container">
+                <div class="project">
+                    <img src="Screenshot 2023-11-19 092950.png" alt="Project 1">
+                    <div class="project-text project-text-right">
+                        <h2>My Music</h2>
+                        <p>This project was my first ever when I started to learn how to code HTML, CSS, and JavaScript. It's a website that shows my music taste and my favorite artist. It's my way of allowing people to get close to me. I have added styles to make it look appealing and more alive and added tabs and a navigation to give the website more functionality.</p>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <img src="Screenshot%202023-11-19%20092926.png" alt="Project 2">
+                    <div class="project-text project-text-left">
+                        <h2>Ctu Buddy</h2>
+                        <p>This is a project I have done with my college classmates. It's called CTU Buddy, and it's there to guide new students who just arrived at college to gain knowledge on the campus, link with other students, and get resources and ask for help if needed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="Skills" class="sections">
+            <h2 class="section-heading">Skills</h2>
+            <div class="skills-container">
+                <!-- Web Development Skill -->
+                <div class="card">
+                    <h2>Web Development</h2>
+                    <p>I have strong skills in HTML, CSS, and JavaScript. I specialize in creating responsive and user-friendly websites.</p>
+                    <a href="" id="but1">Read More</a>
+                </div>
+
+                <!-- Graphic Design Skill -->
+                <div class="card">
+                    <h2>Design</h2> 
+                    <p>I'm proficient in graphic design tools like Adobe Photoshop and Illustrator. I create visually appealing designs for various purposes. I'm also good at designing interfaces for websites, making them appealing and professional looking.</p>
+                    <a href="">Read More</a>
+                </div>
+
+                <!-- Problem Solving Skill -->
+                <div class="card">
+                    <h2>Problem Solving</h2>
+                    <p>I enjoy solving complex problems and finding efficient solutions. I have experience in algorithmic problem-solving and critical thinking. I've done mathematics in high school, which helped train my mind to solve problems.</p>
+                    <a href="" >Read More</a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="Education" class="sections">
+        
+            <div class="about-me-container">
+                <div class="about-me-image">
+                    <img src="IMG_5052.jpg" alt="Picture Of Ethan Billett" class="about-me-picture">
+                </div>
+        
+                <div class="about-me-content">
+                    <div class="about-me-text">
+                        <h2>About me</h2>
+                        <p id="aboutmeC">
+                            I'm Ethan Billett, a dedicated programmer with expertise in HTML, CSS, JavaScript, and Python. Currently pursuing my degree at CTU Training Solutions, I blend theoretical knowledge with practical skills, as evident in projects like the two projects i provided. I excel in problem-solving and critical thinking. A continuous learner, I swiftly adapt to new languages and tools, combining technical prowess with design skills from Adobe Photoshop and Illustrator. Effective communication and teamwork are integral to my work, and I aspire to contribute to innovative projects that push technological boundaries.
+                        </p>
+                    </div>
+        
+                    <div class="info-tabs">
+                        <div class="info-tab" onclick="toggleAboutMeTab('experience')">
+                            <p class="U">Experience</p>
+                            <div class="info-tab-content" id="experience-info">
+                                <p>N/A</p>
+                            </div>
+                        </div>
+                        <div class="info-tab" onclick="toggleAboutMeTab('education')">
+                            <p class="U">Education</p>
+                            <div class="info-tab-content" id="education-info">
+                                <h4>2018-2022</h4>
+                                <p>Alexander Road High School</p>
+                                <h4>2023-Current</h4>
+                                <p>Ctu Training Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        
+        <section id="Contact" class="sections">
+            <div id="contact-info">
+                <h2>Contact Information</h2>
+                <ul>
+                    <li>Phone: O67 973 1079</li>
+                    <li>Email: ethanbillett5@gmail.com</li>
+                </ul>
+            </div>
+        
+            <div id="contact-form">
+                <form id="contactForm" action="https://formsubmit.co/ethanbillett5@gmail.com" method="POST">
+                    <input type="text" id="fullName" name="fullName" required placeholder="fullName">
+        
+                    <input type="email" id="email" name="email" required placeholder="Email">
+        
+                    <textarea id="message" name="message" rows="4" required placeholder="message"></textarea>
+        
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
