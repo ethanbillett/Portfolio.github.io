@@ -1,98 +1,20 @@
-document.addEventListener('DOMContentLoaded', function () {
-
-    var navLinks = document.querySelectorAll('nav a');
-
-    navLinks.forEach(function (link) {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            var targetId = this.getAttribute('href').substring(1);
-            var targetSection = document.getElementById(targetId);
-
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            } else {
-                console.error("Target section with ID '" + targetId + "' not found.");
-            }
-        });
-        var prevScrollPos = window.pageYOffset;
-
-        window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-
-        if (prevScrollPos > currentScrollPos) {
-
-            document.getElementById("myHeader").style.top = "0";
-        } else {
-
-            document.getElementById("myHeader").style.top = "-100px";
-        }
-
-        prevScrollPos = currentScrollPos;
-        }
-    });
-
-    const cursorDot = document.querySelector("[data-cursor-dot]");
-    const cursorOutline = document.querySelector("[data-cursor-outline]");
-
-    function updateCursorPos(e) {
-        const posX = e.clientX;
-        const posY = e.clientY;
-
-        cursorDot.style.left = `${posX}px`;
-        cursorDot.style.top = `${posY}px`;
-
-        cursorOutline.style.left = `${posX}px`;
-        cursorOutline.style.top = `${posY}px`;
-    }
-
-    window.addEventListener("mousemove", updateCursorPos);
-    window.scrollTo(0, 0);
-    
-        
-});
-    
-function toggleSkillTab(skillId) {
-    var skillInfo = document.getElementById(skillId + '-info');
-
-    if (!skillInfo) {
-        console.error("Element with ID '" + skillId + "-info' not found.");
-        return;
-    }
-
-    skillInfo.style.display = (skillInfo.style.display === 'none' || skillInfo.style.display === '')
-        ? 'block'
-        : 'none';
-
-    console.log("Updated display style for " + skillId + ": " + window.getComputedStyle(skillInfo).display);
+"use strict";
+document.body.classList.add("js");
+const menu = document.querySelector(".menu-toggle");
+const navigation = document.getElementById("navigation");
+menu.hidden = false;
+function closeMenu() { navigation.classList.remove("open"); menu.setAttribute("aria-expanded", "false"); }
+menu.addEventListener("click", () => { const open = navigation.classList.toggle("open"); menu.setAttribute("aria-expanded", String(open)); });
+navigation.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
+document.addEventListener("keydown", event => { if (event.key === "Escape" && navigation.classList.contains("open")) { closeMenu(); menu.focus(); } });
+window.matchMedia("(min-width: 761px)").addEventListener("change", closeMenu);
+document.getElementById("year").textContent = new Date().getFullYear();
+if ("IntersectionObserver" in window) {
+ const links = Array.from(navigation.querySelectorAll("a"));
+ const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => { if (entry.isIntersecting) { links.forEach(link => { const active = link.hash === "#" + entry.target.id; link.classList.toggle("active", active); if (active) link.setAttribute("aria-current", "location"); else link.removeAttribute("aria-current"); }); } });
+ }, { rootMargin: "-15% 0px -55% 0px", threshold: 0 });
+ document.querySelectorAll("main section[id]").forEach(section => observer.observe(section));
 }
-function toggleAboutMeTab(tabId) {
-    var tabContent = document.getElementById(tabId + '-info');
-
-    if (!tabContent) {
-        console.error("Element with ID '" + tabId + "-info' not found.");
-        return;
-    }
-
-
-    tabContent.style.display = (tabContent.style.display === 'none' || tabContent.style.display === '')
-        ? 'block'
-        : 'none';
-
-
-    console.log("Updated display style for " + tabId + ": " + window.getComputedStyle(tabContent).display);
-}
-
-var aboutMeTabs = document.querySelectorAll('.info-tab');
-aboutMeTabs.forEach(function (tab) {
-    tab.addEventListener('click', function () {
-        var tabId = this.getAttribute('data-tab-id');
-        toggleAboutMeTab(tabId);
-    });
-});
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    alert('Form submitted!');
-});
+// Keep native form validation and the original FormSubmit POST action.
+// A successful delivery must be confirmed by FormSubmit, never a local alert.

@@ -1,151 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style.css">
-    <script src="Pscript.js"></script>
-    <title>Ethan Billett Portfolio</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Ethan Billett's portfolio. Explore web development projects, design skills and the person behind the code.">
+<meta name="theme-color" content="#101218"><title>Ethan Billett | Developer & Designer</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="Style.css"><script src="Pscript.js" defer></script>
 </head>
 <body>
-
-    <div class="cursor-dot" data-cursor-dot></div>
-    <div class="cursor-outline" data-cursor-outline></div>
-
-    <header id="myHeader">    
-        <h1 class="Title">Ethan Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#Projects">Projects</a></li>
-                <li><a href="#Skills">Skills</a></li>
-                <li><a href="#Education">About Me</a></li>
-                <li><a href="#Contact">Contact</a></li>
-                
-            </ul>
-        </nav>
-     
-    </header>
-
-    <main>
-        <section id="Home" class="sections">
-            <div class="text-reveal">
-                <h2>Hi My Name Is</h2>
-                <h2 class="name" data-text="Ethan Billett">Ethan Billett</h2>
-                <br>
-                <h2>This Is My Online Portfolio</h2>
-                <h3>Let me show you...</h3>
-            </div>
-        </section>
-        <section id="Projects" class="sections">
-            <h2 class="section-heading">Projects</h2>
-            <div class="project-container">
-                <div class="project">
-                    <img src="Screenshot 2023-11-19 092950.png" alt="Project 1">
-                    <div class="project-text project-text-right">
-                        <h2>My Music</h2>
-                        <p>This project was my first ever when I started to learn how to code HTML, CSS, and JavaScript. It's a website that shows my music taste and my favorite artist. It's my way of allowing people to get close to me. I have added styles to make it look appealing and more alive and added tabs and a navigation to give the website more functionality.</p>
-                    </div>
-                </div>
-        
-                <div class="project">
-                    <img src="Screenshot%202023-11-19%20092926.png" alt="Project 2">
-                    <div class="project-text project-text-left">
-                        <h2>Ctu Buddy</h2>
-                        <p>This is a project I have done with my college classmates. It's called CTU Buddy, and it's there to guide new students who just arrived at college to gain knowledge on the campus, link with other students, and get resources and ask for help if needed.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="Skills" class="sections">
-            <h2 class="section-heading">Skills</h2>
-            <div class="skills-container">
-                <!-- Web Development Skill -->
-                <div class="card">
-                    <h2>Web Development</h2>
-                    <p>I have strong skills in HTML, CSS, and JavaScript. I specialize in creating responsive and user-friendly websites.</p>
-                    <a href="" id="but1">Read More</a>
-                </div>
-
-                <!-- Graphic Design Skill -->
-                <div class="card">
-                    <h2>Design</h2> 
-                    <p>I'm proficient in graphic design tools like Adobe Photoshop and Illustrator. I create visually appealing designs for various purposes. I'm also good at designing interfaces for websites, making them appealing and professional looking.</p>
-                    <a href="">Read More</a>
-                </div>
-
-                <!-- Problem Solving Skill -->
-                <div class="card">
-                    <h2>Problem Solving</h2>
-                    <p>I enjoy solving complex problems and finding efficient solutions. I have experience in algorithmic problem-solving and critical thinking. I've done mathematics in high school, which helped train my mind to solve problems.</p>
-                    <a href="" >Read More</a>
-                </div>
-            </div>
-        </section>
-
-
-
-        <section id="Education" class="sections">
-        
-            <div class="about-me-container">
-                <div class="about-me-image">
-                    <img src="IMG_5052.jpg" alt="Picture Of Ethan Billett" class="about-me-picture">
-                </div>
-        
-                <div class="about-me-content">
-                    <div class="about-me-text">
-                        <h2>About me</h2>
-                        <p id="aboutmeC">
-                            I'm Ethan Billett, a dedicated programmer with expertise in HTML, CSS, JavaScript, and Python. Currently pursuing my degree at CTU Training Solutions, I blend theoretical knowledge with practical skills, as evident in projects like the two projects i provided. I excel in problem-solving and critical thinking. A continuous learner, I swiftly adapt to new languages and tools, combining technical prowess with design skills from Adobe Photoshop and Illustrator. Effective communication and teamwork are integral to my work, and I aspire to contribute to innovative projects that push technological boundaries.
-                        </p>
-                    </div>
-        
-                    <div class="info-tabs">
-                        <div class="info-tab" onclick="toggleAboutMeTab('experience')">
-                            <p class="U">Experience</p>
-                            <div class="info-tab-content" id="experience-info">
-                                <p>N/A</p>
-                            </div>
-                        </div>
-                        <div class="info-tab" onclick="toggleAboutMeTab('education')">
-                            <p class="U">Education</p>
-                            <div class="info-tab-content" id="education-info">
-                                <h4>2018-2022</h4>
-                                <p>Alexander Road High School</p>
-                                <h4>2023-Current</h4>
-                                <p>Ctu Training Solutions</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        
-        
-        
-        <section id="Contact" class="sections">
-            <div id="contact-info">
-                <h2>Contact Information</h2>
-                <ul>
-                    <li>Phone: O67 973 1079</li>
-                    <li>Email: ethanbillett5@gmail.com</li>
-                </ul>
-            </div>
-        
-            <div id="contact-form">
-                <form id="contactForm" action="https://formsubmit.co/ethanbillett5@gmail.com" method="POST">
-                    <input type="text" id="fullName" name="fullName" required placeholder="fullName">
-        
-                    <input type="email" id="email" name="email" required placeholder="Email">
-        
-                    <textarea id="message" name="message" rows="4" required placeholder="message"></textarea>
-        
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-        </section>
-    </main>
-</body>
-</html>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="header"><div class="container nav-wrap"><a class="brand" href="#Home" aria-label="Ethan Billett home">eb<span>.</span></a>
+<button class="menu-toggle" aria-controls="navigation" aria-expanded="false" hidden>Menu <span aria-hidden="true">☰</span></button>
+<nav id="navigation" aria-label="Main navigation"><a href="#Home" class="active">Home</a><a href="#Projects">Work</a><a href="#Skills">Skills</a><a href="#Education">About</a><a href="#Contact" class="nav-contact">Let’s talk <span aria-hidden="true">↗</span></a></nav></div></header>
+<main id="main">
+<section id="Home" class="hero container">
+<div class="hero-copy"><p class="eyebrow">ETHAN BILLETT · DEVELOPER & DESIGNER</p><h1>A creative mind.<br>A love for<br><span class="accent">building things.</span></h1><p class="intro">I bring ideas to life through code and design. Explore my projects and get to know the person behind the pixels.</p><div class="actions"><a class="button primary" href="#Projects">Explore my work <span aria-hidden="true">↗</span></a><a class="text-link" href="#Contact">Get in touch <span aria-hidden="true">↗</span></a></div><p class="hero-foot">WEB DEVELOPMENT <span>/</span> DESIGN <span>/</span> PROBLEM SOLVING</p></div>
+<div class="portrait-wrap"><div class="portrait-frame"><img src="assets/ethan.webp" alt="Ethan Billett wearing a checked blazer" width="1000" height="1000" fetchpriority="high"><span class="portrait-index">01 / THE PERSON BEHIND THE CODE</span></div><div class="portrait-caption"><span>Ethan Billett</span><span>Always learning. Always creating.</span></div></div>
+</section>
+<div class="tool-strip"><div class="container"><span>MY CREATIVE TOOLKIT</span><p>HTML <i>/</i> CSS <i>/</i> JavaScript <i>/</i> Java <i>/</i> Python <i>/</i> Photoshop <i>/</i> Illustrator</p></div></div>
+<section id="Projects" class="section container"><div class="section-top"><div><p class="eyebrow">01 / SELECTED WORK</p><h2>Ideas turned into<br>something real<span class="accent">.</span></h2></div><p>A few projects from my journey<br>in development and design.</p></div>
+<div class="projects"><article class="project"><a class="project-image music" href="assets/my-music.webp" target="_blank" rel="noopener" aria-label="Open My Music project screenshot in a new tab"><div class="browser-bar"><span>● ● ●</span><span>My Music</span><span>↗</span></div><img src="assets/my-music.webp" alt="My Music website with a yellow music-themed homepage" width="1400" height="564" loading="lazy"></a><div class="project-heading"><h3>My Music</h3><span>01</span></div><p>Where my coding journey began. A personal website sharing my favourite artists and music, with tabs and navigation to explore.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Personal project</span></div></article>
+<article class="project"><a class="project-image buddy" href="assets/ctu-buddy.webp" target="_blank" rel="noopener" aria-label="Open CTU Buddy project screenshot in a new tab"><div class="browser-bar"><span>● ● ●</span><span>CTU Buddy</span><span>↗</span></div><img src="assets/ctu-buddy.webp" alt="CTU Buddy student community website homepage" width="1400" height="631" loading="lazy"></a><div class="project-heading"><h3>CTU Buddy</h3><span>02</span></div><p>A collaborative college project helping new students find campus information, connect with classmates and share learning resources.</p><div class="tags"><span>Web development</span><span>UI design</span><span>Team project</span></div></article>
+<article class="project project-wide"><div class="sweet-gallery"><a class="project-image sweet-screenshot" href="assets/sweet-treats-home.webp" target="_blank" rel="noopener" aria-label="Open Sweet Treats home page screenshot"><div class="browser-bar"><span>● ● ●</span><span>Home page</span><span>↗</span></div><img src="assets/sweet-treats-home.webp" width="1440" height="1050" loading="lazy" alt="Sweet Treats by Abigail home page website screenshot"></a><a class="project-image sweet-screenshot" href="assets/sweet-treats-products.webp" target="_blank" rel="noopener" aria-label="Open Sweet Treats products page screenshot"><div class="browser-bar"><span>● ● ●</span><span>Products page</span><span>↗</span></div><img src="assets/sweet-treats-products.webp" width="1440" height="1050" loading="lazy" alt="Sweet Treats by Abigail products page website screenshot"></a></div><div class="project-description"><div class="project-heading"><h3>Sweet Treats by Abigail</h3><span>03</span></div><p>A bakery website for Sweet Treats by Abigail in Booysens Park, Gqeberha. It showcases cakes and desserts, introduces the business and provides contact and custom-order enquiry pages.</p><div class="tags"><span>HTML</span><span>CSS</span><span>Responsive design</span><span>Business website</span></div></div></article>
+<article class="project"><div class="project-summary java-summary"><span class="eyebrow">JAVA / MESSAGING</span><h3>Chat Application<span>.</span></h3><p>Registration. Messages. Conversation.</p></div><div class="project-heading"><h3>Java Chat Application</h3><span>04</span></div><p>A Java application with registration, login and input validation. Message features include unique IDs and hashes, JSON storage, searching by recipient or ID, deleting by hash and generating reports.</p><div class="tags"><span>Java</span><span>JSON</span><span>Input validation</span><span>JUnit</span></div></article>
+<article class="project"><div class="project-summary hospital-summary"><span class="eyebrow">JAVA / PATIENT MANAGEMENT</span><h3>Hospital Admission<br>System<span>.</span></h3><p>Patients. Wards. Bed allocation.</p></div><div class="project-heading"><h3>Hospital Admission System</h3><span>05</span></div><p>A Java application for registering, searching, updating and deleting patient records. It manages inpatient bed allocation and release, displays ward layouts and available beds, and generates ward reports.</p><div class="tags"><span>Java</span><span>OOP & inheritance</span><span>JUnit</span><span>Console application</span></div></article>
+</div></section>
+<section id="Skills" class="section skills-section"><div class="container"><div class="section-top"><div><p class="eyebrow">02 / WHAT I BRING</p><h2>Code meets creativity<span class="accent">.</span></h2></div></div><div class="skills-grid">
+<article class="skill"><span class="skill-icon" aria-hidden="true">&lt;/&gt;</span><h3>Web & application development</h3><p>Responsive websites built with HTML, CSS and JavaScript, plus application development in Java and Python.</p><details><summary>More about my approach</summary><p>I combine clear page structure, thoughtful styling and useful interactions to make websites work across screen sizes. I also develop applications with Java and Python.</p></details></article>
+<article class="skill"><span class="skill-icon" aria-hidden="true">Aa</span><h3>Visual design</h3><p>Bringing together thoughtful interfaces and a strong eye for visual detail.</p><details><summary>More about my approach</summary><p>I use Adobe Photoshop and Illustrator for graphics, and apply layout, colour and typography to website interfaces.</p></details></article>
+<article class="skill"><span class="skill-icon" aria-hidden="true">{ }</span><h3>Problem solving</h3><p>Breaking down challenges and turning complex ideas into practical solutions.</p><details><summary>More about my approach</summary><p>Mathematics, algorithms and programming have shaped my approach: understand the problem, explore solutions and improve through testing.</p></details></article>
+</div></div></section>
+<section id="Education" class="section container about"><div><p class="eyebrow">03 / BEHIND THE WORK</p><h2>Curiosity drives me.<br>Creating keeps<br>me going<span class="accent">.</span></h2><p class="about-note">A developer with a designer’s eye.</p></div><div class="about-content"><p class="large-copy">Hi, I’m Ethan. I enjoy bringing technical thinking and creative ideas together.</p><p>I’m currently studying at Rosebank College, after finishing my time at CTU Training Solutions at the end of 2023. My studies help me connect programming theory with practical projects. I work with HTML, CSS, JavaScript, Java and Python, alongside design tools like Photoshop and Illustrator.</p><p>I’m always exploring new languages and tools. Whether I’m working independently or with a team, I value clear communication, thoughtful solutions and learning along the way.</p>
+<div class="education"><h3>Education</h3><div><span>Current</span><p>Rosebank College<small>Currently studying</small></p></div><div><span>2023</span><p>CTU Training Solutions<small>Attended until the end of 2023</small></p></div><div><span>2018 — 2022</span><p>Alexander Road High School<small>Secondary education</small></p></div></div><details class="experience"><summary>Project experience</summary><p>Website projects include My Music, CTU Buddy and Sweet Treats by Abigail. My Java projects include a Chat Application and a Hospital Admission System.</p></details></div></section>
+<section id="Contact" class="section contact-section"><div class="container contact-grid"><div><p class="eyebrow">04 / GET IN TOUCH</p><h2>Have an idea?<br>Let’s make<br><span class="accent">it happen.</span></h2><p>For a project, a collaboration or just a hello.</p><a class="email-link" href="mailto:ethanbillett5@gmail.com">ethanbillett5@gmail.com <span aria-hidden="true">↗</span></a><a class="phone-link" href="tel:+27679731079">+27 67 973 1079</a></div><form id="contactForm" action="https://formsubmit.co/ethanbillett5@gmail.com" method="POST"><label for="fullName">Your name</label><input type="text" id="fullName" name="fullName" autocomplete="name" placeholder="Name and surname" required maxlength="120"><label for="email">Email address</label><input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" required maxlength="254"><label for="message">What do you have in mind?</label><textarea id="message" name="message" rows="4" placeholder="Tell me a little about your idea…" required maxlength="5000"></textarea><button type="submit" class="button primary">Send message <span aria-hidden="true">↗</span></button><p class="form-note">Continues to FormSubmit to complete sending. You can also email me directly.</p></form></div></section>
+</main><footer class="container footer"><a class="brand" href="#Home" aria-label="Back to home">eb<span>.</span></a><p>© <span id="year">2026</span> Ethan Billett</p><a href="#Home">Back to top ↑</a></footer>
+</body></html>
